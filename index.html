@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أعمالي اليدوية | Mes créations artisanales</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --main: #8b5e3c;
+      --bg: #f9f6f2;
+      --text: #333;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--main);
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 { font-size: 22px; }
+
+    nav button {
+      background: #fff;
+      color: var(--main);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section { padding: 50px 10%; }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero img {
+      width: 180px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,.1);
+      transition: transform .3s;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card div { padding: 15px; }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      color: var(--main);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 id="title">أعمالي اليدوية</h1>
+  <nav>
+    <button onclick="switchLang()">FR / AR</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="https://via.placeholder.com/300" alt="profile" />
+  <h2 id="heroTitle">مرحبا بكم</h2>
+  <p id="heroText">أقوم بصناعة أعمال يدوية فريدة تجمع بين الإبداع و الأصالة.</p>
+</section>
+
+<section>
+  <h2 id="galleryTitle">معرض الأعمال</h2>
+  <div class="gallery">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300" />
+      <div>
+        <h3 id="p1">قطعة فنية يدوية</h3>
+        <p id="p1d">مصنوعة بعناية من مواد طبيعية.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300" />
+      <div>
+        <h3 id="p2">عمل تقليدي</h3>
+        <p id="p2d">تصميم مستوحى من التراث.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2 id="contactTitle">تواصل معي</h2>
+  <a href="#">📞 واتساب</a>
+  <a href="#">📷 إنستغرام</a>
+</section>
+
+<footer>
+  <p>© 2026</p>
+</footer>
+
+<script>
+  let lang = 'ar';
+
+  function switchLang() {
+    if (lang === 'ar') {
+      document.documentElement.lang = 'fr';
+      document.documentElement.dir = 'ltr';
+      title.innerText = 'Mes créations artisanales';
+      heroTitle.innerText = 'Bienvenue';
+      heroText.innerText = 'Je crée des objets artisanaux uniques alliant créativité et authenticité.';
+      galleryTitle.innerText = 'Galerie';
+      p1.innerText = 'Objet fait main';
+      p1d.innerText = 'Fabriqué avec soin à partir de matériaux naturels.';
+      p2.innerText = 'Création traditionnelle';
+      p2d.innerText = 'Design inspiré du patrimoine.';
+      contactTitle.innerText = 'Contact';
+      lang = 'fr';
+    } else {
+      document.documentElement.lang = 'ar';
+      document.documentElement.dir = 'rtl';
+      title.innerText = 'أعمالي اليدوية';
+      heroTitle.innerText = 'مرحبا بكم';
+      heroText.innerText = 'أقوم بصناعة أعمال يدوية فريدة تجمع بين الإبداع و الأصالة.';
+      galleryTitle.innerText = 'معرض الأعمال';
+      p1.innerText = 'قطعة فنية يدوية';
+      p1d.innerText = 'مصنوعة بعناية من مواد طبيعية.';
+      p2.innerText = 'عمل تقليدي';
+      p2d.innerText = 'تصميم مستوحى من التراث.';
+      contactTitle.innerText = 'تواصل معي';
+      lang = 'ar';
+    }
+  }
+</script>
+
+</body>
+</html>
